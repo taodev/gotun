@@ -21,3 +21,5 @@
 go.work
 gotun
 config.yaml
+dist/
+conf/
