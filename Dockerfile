@@ -15,9 +15,5 @@ RUN set -ex \
         ./cmd/gotun
 FROM --platform=$TARGETPLATFORM alpine AS dist
 LABEL maintainer="taodev <taodev@qq.com>"
-RUN set -ex \
-    && apk upgrade \
-    && apk add bash tzdata ca-certificates \
-    && rm -rf /var/cache/apk/*
 COPY --from=builder /go/bin/gotun /usr/local/bin/gotun
 ENTRYPOINT ["gotun"]
