@@ -4,8 +4,11 @@ DIR=$(dirname "$0")
 
 GOPATH=$(shell go env GOBIN)
 
+# mkdir -p ./dist
+
 # 生成linux可执行文件
 linux:
+	rm -fr ./dist
 	GOOS=linux GOARCH=amd64 go build -o ./dist/$(APP_NAME) ./cmd/gotun
 
 openwrt:

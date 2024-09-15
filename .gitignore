@@ -19,7 +19,6 @@
 
 # Go workspace file
 go.work
-gotun
 config.yaml
 dist/
 conf/
